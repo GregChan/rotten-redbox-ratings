@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "Rotten Redbox Ratings",
+    "description": "This extension shows Rotten Tomatoes ratings for movies on the Rebox website",
+    "version": "0.0.0.1",
+    "content_scripts": [{
+        "matches": ["http://www.redbox.com/*", "http://localhost:8080/*"],
+        "js": ["jquery.js", "main.js"] 
+    }], 
+    "permissions": [
+        "activeTab",
+        "http://api.rottentomatoes.com/api/public/v1.0/"
+    ]
+}
